@@ -4,7 +4,7 @@
  */
 package com.puhlen.interactive
 
-class Menu{
+class Menu(){
     var title = ""
     private var items: MutableList<MenuItem> = mutableListOf()
     fun addItem(item: MenuItem):Boolean{
