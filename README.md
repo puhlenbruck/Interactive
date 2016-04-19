@@ -59,5 +59,21 @@ public class MyMenuItem extends MenuItem {
 ```
 The accept method currently has no use, but in the future it will be called when the menu item is selected by the user.
 
+#Maven
+The library can be used by adding the jar to your classpath, but it is also possible to include it as a maven dependancy.
+
+There is no artifact repository for this project yet so you will need to install it manually to your local respoitory.  To do so, download this project (or clone with git) and use the command `mvn install`.  
+
+You can also download just the jar file and use the command `mvn install:install-file -Dfile=<path-to-jar>` if you simply wish to use the library
+
+After doing so you should be able to add the depandancy to your pom.xml with
+```xml
+<dependency>
+    <groupId>com.puhlen</groupId>
+    <artifactId>Interactive</artifactId>
+    <version>0.1-SNAPSHOT</version>
+</dependency>
+```
+
 
 
