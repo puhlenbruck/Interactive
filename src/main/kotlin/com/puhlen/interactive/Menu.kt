@@ -19,6 +19,14 @@ class Menu(){
     }
 }
 
-abstract class MenuItem(val message: String){
-    abstract fun accept();
+class MenuItem(val message: String){
+    var SelectionHandler:SelectionHandler = DefaultSelectionHandler;
+}
+
+interface SelectionHandler{
+    fun select();
+}
+
+object DefaultSelectionHandler:SelectionHandler{
+    override fun select() {}
 }
