@@ -13,14 +13,21 @@ class Menu(){
 
     fun render(){
         Output.printStream.println(title)
-        for(i in items){
-            Output.printStream.println(i.message)
+        for(i in items.indices){
+            Output.printStream.println("${i+1}) ${items[i]}")
         }
     }
 }
 
 class MenuItem(val message: String){
-    var SelectionHandler:SelectionHandler = DefaultSelectionHandler;
+    var selectionHandler:SelectionHandler = DefaultSelectionHandler;
+    internal fun select(){
+        selectionHandler.select()
+    }
+    override fun toString(): String{
+        return message
+    }
+
 }
 
 interface SelectionHandler{
