@@ -1,3 +1,5 @@
+*.sw*
+*.sh
 .idea
 .project
 .classpath
